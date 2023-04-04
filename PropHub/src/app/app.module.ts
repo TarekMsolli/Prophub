@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LandingComponent } from './landing/landing.component';
 import { GameShopComponent } from './game-shop/game-shop.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingComponent,
-    GameShopComponent
+    GameShopComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

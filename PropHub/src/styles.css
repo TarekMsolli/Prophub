@@ -1,1 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
+/* Fonts from google*/
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+*{
+    font-family: 'Russo One';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /*color palette*/
+    --main: #162447;
+    --secondaryone: #1F4068;
+    --secondarytwo: #1B1B2F;
+    --accent: #E43F5A;
+
+    /*transitions*/
+    --tran-02: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.4s ease;
+    --tran-05: all 0.5s ease;
+  }
+
+body{
+    background-color: var(--secondarytwo);
+    height: 100vh;
+}
