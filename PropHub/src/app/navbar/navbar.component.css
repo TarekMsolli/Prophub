@@ -1,39 +1,55 @@
-.sidebar .text{
-    color: var(--accent);
-}
-
-.sidebar .image{
-    min-width: 60px;
-    display: flex;
-    align-items: center;
-}
-
-/*sidebar*/
-.sidebar{
+.container{
     position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 250px;
-    padding: 10px 14px;
-    background-color: var(--main);
-}
-
-.sidebar .image-text img{
-    width: 40px;
-    border-radius: 6px;
-}
-
-.sidebar header .image-text{
-    display: flex;
-    align-items: center;
-}
-
-header .image-text header-text{
-    display: flex;
+    height: 100vh;
+    width: 5vw;
     flex-direction: column;
+    min-width: 40px;
 }
 
-.header-text .name{
+.sidebar{
+    background-color: var(--three);
+    position: relative;
+    top: 1vh;
+    width: 3vw;
+    min-width: 40px;
+    min-height: 270px;
+    height: 98vh;
+    border-radius: 10px;
+    text-align: center;
     font-size: 2rem;
+    box-shadow: 2px 2px 4px var(--five);
+}
+
+.sidebar ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 1vh 0;
+    width: 100%;
+}
+
+.sidebar li{
+    padding: 1vh 0vw;
+    width: 100%;
+}
+
+.sidebar i:hover{
+    background-color: white;
+    transition: var(--tran-02);
+}
+
+.sidebar img{
+    width: 2.5vw;
+    padding-bottom: 4vh;
+}
+
+.sidebar .night-mode{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+i{
+    width: 100%;
+    color: var(--one);
+    border-radius: 5px;
 }

@@ -10,19 +10,21 @@
 
 :root {
     /*color palette*/
-    --main: #162447;
-    --secondaryone: #1F4068;
-    --secondarytwo: #1B1B2F;
-    --accent: #E43F5A;
+    --one: #e23c5c;
+    --two: #9E4784;
+    --three: #37306B;
+    --four: #645CBB;
+    --five: #212121;
+    --six: #FFF4E0;
 
     /*transitions*/
-    --tran-02: all 0.2s ease;
-    --tran-03: all 0.3s ease;
-    --tran-04: all 0.4s ease;
-    --tran-05: all 0.5s ease;
+    --tran-02: all 0.2s;
+    --tran-03: all 0.3s;
+    --tran-04: all 0.4s;
+    --tran-05: all 0.5s;
   }
 
 body{
-    background-color: var(--secondarytwo);
+    background-color: var(--four);
     height: 100vh;
 }
