@@ -9,17 +9,18 @@
 }
 
 .sidebar{
-    background-color: var(--three);
+    background-color: white;
     position: relative;
-    top: 7vh;
+    top: 1vh;
     width: 3vw;
     min-width: 40px;
     min-height: 270px;
-    height: 90vh;
+    height: 98vh;
     border-radius: 10px;
     text-align: center;
     font-size: 2rem;
-    box-shadow: 2px 2px 8px var(--one);
+    box-shadow: 2px 2px 8px black;
+    overflow: hidden;
 }
 
 .sidebar ul{
@@ -35,15 +36,23 @@
 }
 
 .sidebar i:hover{
-    background-color: white;
+    background-color: var(--one);
     transition: var(--tran-05);
+}
+
+.sidebar li .logo{
+    padding-bottom: 4vh; 
 }
 
 .sidebar img{
     width: 2.5vw;
-    min-width: 35px;
-    padding-bottom: 4vh;
-    
+    min-width: 35px;  
+}
+
+.sidebar img:hover{
+    transform: rotate(180deg);
+    transform-origin: 50% 50%;
+    transition: var(--tran-02);
 }
 
 .sidebar .night-mode{
@@ -54,6 +63,6 @@
 
 .sidebar i{
     width: 100%;
-    color: var(--one);
+    color: black;
     border-radius: 5px;
 }

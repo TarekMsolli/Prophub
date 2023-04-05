@@ -8,6 +8,7 @@ import { LandingComponent } from './landing/landing.component';
 import { GameShopComponent } from './game-shop/game-shop.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HeaderComponent } from './header/header.component';
+import { GameAssetShopComponent } from './game-asset-shop/game-asset-shop.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { HeaderComponent } from './header/header.component';
     LandingComponent,
     GameShopComponent,
     NavbarComponent,
-    HeaderComponent
+    HeaderComponent,
+    GameAssetShopComponent
   ],
   imports: [
     BrowserModule,
