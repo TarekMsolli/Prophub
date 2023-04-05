@@ -7,13 +7,15 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LandingComponent } from './landing/landing.component';
 import { GameShopComponent } from './game-shop/game-shop.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingComponent,
     GameShopComponent,
-    NavbarComponent
+    NavbarComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

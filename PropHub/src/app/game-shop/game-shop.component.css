@@ -1,0 +1,10 @@
+.gscontainer{
+    background-color: var(--three);
+    width: 90vw;
+    height: 82%;
+    position: absolute;
+    left: 7vw;
+    top: 15vh;
+    box-shadow: 2px 2px 8px var(--one);
+    border-radius: 10px;
+}
