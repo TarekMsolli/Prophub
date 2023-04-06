@@ -14,8 +14,7 @@
     top: 20%;
     width: 3vw;
     min-width: 40px;
-    min-height: 270px;
-    height: 50%;
+    height: 60%;
     border-radius: 10px;
     text-align: center;
     font-size: 2rem;
@@ -55,11 +54,12 @@
     transform: rotate(180deg);
     transform-origin: 50% 50%;
     transition: var(--tran-02);
+
 }
 
-.sidebar .night-mode{
+.sidebar .bottom-list{
     position: absolute;
-    bottom: 0;
+    top: 43vh;
     width: 100%;
 }
 
@@ -68,3 +68,4 @@
     color: var(--one);
     border-radius: 5px;
 }
+

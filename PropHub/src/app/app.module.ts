@@ -11,6 +11,8 @@ import { HeaderComponent } from './header/header.component';
 import { GameAssetShopComponent } from './game-asset-shop/game-asset-shop.component';
 import { GameCardComponent } from './game-card/game-card.component';
 import { GamePreviewComponent } from './game-preview/game-preview.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { GamePreviewComponent } from './game-preview/game-preview.component';
     HeaderComponent,
     GameAssetShopComponent,
     GameCardComponent,
-    GamePreviewComponent
+    GamePreviewComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

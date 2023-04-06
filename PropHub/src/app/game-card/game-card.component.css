@@ -8,6 +8,12 @@
     color: var(--one);
     background-color: var(--three);
     box-shadow: 2px 2px 8px black;
+    transition: var(--tran-03) ease;
+}
+
+.gccontainer .card:hover{
+    transform: translateY(-0.75rem);
+    box-shadow: 2px 2px 8px var(--one);
 }
 
 .gccontainer a{

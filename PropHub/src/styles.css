@@ -40,6 +40,7 @@ body{
     height: 15vw;
     background-image: linear-gradient(var(--one), yellow);
     transform: rotate(-45deg);
+    z-index: -10;
 }
 
 .magic-sphere#sphere2{
@@ -49,6 +50,7 @@ body{
     height: 25vw;
     background-image: linear-gradient(purple, cyan);
     transform: rotate(15deg);
+    z-index: -10;
 }
 
 .magic-sphere#sphere3{
@@ -58,8 +60,5 @@ body{
     height: 15vw;
     background-image: linear-gradient(green, cyan);
     transform: rotate(130deg);
-}
-
-.ball-sack{
     z-index: -10;
 }
