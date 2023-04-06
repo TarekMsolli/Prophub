@@ -4,18 +4,18 @@
     width: 5vw;
     flex-direction: column;
     min-width: 40px;
-    z-index: 0;
+    z-index: 10;
     left: 1vw;
 }
 
 .sidebar{
     background-color: white;
     position: relative;
-    top: 1vh;
+    top: 20%;
     width: 3vw;
     min-width: 40px;
     min-height: 270px;
-    height: 98vh;
+    height: 50%;
     border-radius: 10px;
     text-align: center;
     font-size: 2rem;
@@ -44,12 +44,14 @@
     padding-bottom: 4vh; 
 }
 
-.sidebar img{
+.sidebar svg{
+    fill: var(--one);
     width: 2.5vw;
-    min-width: 35px;  
+    min-width: 35px;
+    ;
 }
 
-.sidebar img:hover{
+.sidebar svg:hover{
     transform: rotate(180deg);
     transform-origin: 50% 50%;
     transition: var(--tran-02);

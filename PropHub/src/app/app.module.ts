@@ -9,6 +9,7 @@ import { GameShopComponent } from './game-shop/game-shop.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HeaderComponent } from './header/header.component';
 import { GameAssetShopComponent } from './game-asset-shop/game-asset-shop.component';
+import { GameCardComponent } from './game-card/game-card.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { GameAssetShopComponent } from './game-asset-shop/game-asset-shop.compon
     GameShopComponent,
     NavbarComponent,
     HeaderComponent,
-    GameAssetShopComponent
+    GameAssetShopComponent,
+    GameCardComponent
   ],
   imports: [
     BrowserModule,
