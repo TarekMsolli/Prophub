@@ -10,6 +10,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HeaderComponent } from './header/header.component';
 import { GameAssetShopComponent } from './game-asset-shop/game-asset-shop.component';
 import { GameCardComponent } from './game-card/game-card.component';
+import { GamePreviewComponent } from './game-preview/game-preview.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { GameCardComponent } from './game-card/game-card.component';
     NavbarComponent,
     HeaderComponent,
     GameAssetShopComponent,
-    GameCardComponent
+    GameCardComponent,
+    GamePreviewComponent
   ],
   imports: [
     BrowserModule,

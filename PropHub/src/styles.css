@@ -11,8 +11,8 @@
 :root {
     /*color palette*/
     --one: #e23c5c;
-    --two: #4F3961;
-    --three: #37306B;
+    --two: #151030;
+    --three: #232740;
     --four: #212121;
 
     /*transitions*/
@@ -25,4 +25,41 @@
 body{
     background-color: var(--two);
     height: 100vh;
+}
+
+.magic-sphere{
+    position: fixed;
+    filter: blur(20px);
+    border-radius: 50%;
+}
+
+.magic-sphere#sphere1{
+    left: 10vw;
+    top: 15vh;
+    width: 15vw;
+    height: 15vw;
+    background-image: linear-gradient(var(--one), yellow);
+    transform: rotate(-45deg);
+}
+
+.magic-sphere#sphere2{
+    right: 5vw;
+    top: 35vh;
+    width: 25vw;
+    height: 25vw;
+    background-image: linear-gradient(purple, cyan);
+    transform: rotate(15deg);
+}
+
+.magic-sphere#sphere3{
+    left: -5vw;
+    bottom: 6vh;
+    width: 15vw;
+    height: 15vw;
+    background-image: linear-gradient(green, cyan);
+    transform: rotate(130deg);
+}
+
+.ball-sack{
+    z-index: -10;
 }

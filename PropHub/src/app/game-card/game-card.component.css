@@ -1,5 +1,20 @@
 .gccontainer{
     max-width: 300px;
     margin-bottom: 10%;
+    min-width: 200px;
+}
+
+.gccontainer .card{
+    color: var(--one);
+    background-color: var(--three);
     box-shadow: 2px 2px 8px black;
+    
+}
+
+.gccontainer a{
+    text-decoration: none;
+}
+
+.gccontainer .card-text{
+    color: white;
 }

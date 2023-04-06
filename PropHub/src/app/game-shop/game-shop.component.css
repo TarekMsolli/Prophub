@@ -1,9 +1,11 @@
 body{
     text-align: center;
+    width: 80vw;
 }
 .gscontainer{
-    width: 100%;
+    width: 90%;
     position: absolute;
     top: 2vh;
-    text-align: center;
+    right: 0;
+
 }
