@@ -34,8 +34,8 @@ body{
 }
 
 .magic-sphere#sphere1{
-    left: 10vw;
-    top: 15vh;
+    left: 8vw;
+    top: 5vh;
     width: 15vw;
     height: 15vw;
     background-image: linear-gradient(var(--one), yellow);

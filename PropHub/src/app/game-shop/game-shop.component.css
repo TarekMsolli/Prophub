@@ -1,11 +1,12 @@
 body{
     text-align: center;
-    width: 80vw;
 }
 .gscontainer{
     width: 90%;
     position: absolute;
     top: 2vh;
-    right: 0;
-
+    right: 12px;
+}
+.gscontainer .cards-holder{
+    margin-top: 10vh;
 }
