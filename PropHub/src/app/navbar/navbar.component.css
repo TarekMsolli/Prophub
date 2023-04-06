@@ -41,7 +41,8 @@
 }
 
 .sidebar li .logo{
-    padding-bottom: 4vh; 
+    padding-bottom: 4vh;
+    background-color: aqua;
 }
 
 .sidebar svg{
@@ -50,11 +51,14 @@
     min-width: 35px;
 }
 
-.sidebar svg:hover{
+.sidebar .logoholder{
+    border-radius: 50%;
+    transition: var(--tran-02);
+}
+
+.sidebar .logoholder:hover{
     transform: rotate(180deg);
     transform-origin: 50% 50%;
-    transition: var(--tran-02);
-
 }
 
 .sidebar .bottom-list{
@@ -68,4 +72,5 @@
     color: var(--one);
     border-radius: 5px;
 }
+
 
