@@ -1,3 +1,10 @@
+.registercontainer{
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    right: 30vh;
+}
+
 .registercontainer form{
     text-align: center;
     padding: 5vh;
