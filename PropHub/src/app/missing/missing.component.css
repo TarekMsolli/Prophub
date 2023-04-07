@@ -1,0 +1,15 @@
+.mcontainer{
+    position: absolute;
+    width: 80vw;
+    text-align: center;
+    left: 10vw;
+    top: 10vh;
+}
+.mcontainer h1{
+    color: var(--one);
+}
+
+.mcontainer img{
+    opacity: 50%;
+    width: 50%;
+}

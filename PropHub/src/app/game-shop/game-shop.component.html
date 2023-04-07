@@ -2,6 +2,42 @@
 <div class="gscontainer">
     <app-header></app-header>
     <div class="cards-holder">
+        <div class="row trending">
+            <div class="section-title">
+                <h2>Trending</h2>
+            </div>
+            <marquee behavior="scroll" direction="" loop="-1">
+            <div class="d-flex flex-row flex-nowrap">
+                <div class="dragging-cat">
+                    <img src="../../assets/cat-dragging-with-rope.gif" alt="" id="dragging-cat">
+                </div>
+                <div class="col">
+                    <app-trending-game-card></app-trending-game-card>
+                </div>
+                <div class="col">
+                    <app-trending-game-card></app-trending-game-card>
+                </div>
+                <div class="col">
+                    <app-trending-game-card></app-trending-game-card>
+                </div>
+                <div class="col">
+                    <app-trending-game-card></app-trending-game-card>
+                </div>
+                <div class="col">
+                    <app-trending-game-card></app-trending-game-card>
+                </div>
+                <div class="col">
+                    <app-trending-game-card></app-trending-game-card>
+                </div>
+                <div class="col">
+                    <app-trending-game-card></app-trending-game-card>
+                </div>
+            </div>
+        </marquee>
+        <div class="section-title">
+            <h2>Games</h2>
+        </div>
+        </div>
         <div class="row">
             <div class="col">
                 <app-game-card></app-game-card>

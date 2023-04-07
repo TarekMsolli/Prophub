@@ -6,6 +6,7 @@ import { GameAssetShopComponent } from './game-asset-shop/game-asset-shop.compon
 import { GamePreviewComponent } from './game-preview/game-preview.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { MissingComponent } from './missing/missing.component';
 
 const routes: Routes = [
   { path: 'landing', component: LandingComponent },
@@ -13,7 +14,8 @@ const routes: Routes = [
   { path: 'game-asset-shop', component: GameAssetShopComponent },
   { path: 'game-preview', component: GamePreviewComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'register', component: RegisterComponent }
+  { path: 'register', component: RegisterComponent },
+  { path: 'missing', component: MissingComponent }
 ];
 
 @NgModule({

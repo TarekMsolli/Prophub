@@ -13,6 +13,8 @@ import { GameCardComponent } from './game-card/game-card.component';
 import { GamePreviewComponent } from './game-preview/game-preview.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { TrendingGameCardComponent } from './trending-game-card/trending-game-card.component';
+import { MissingComponent } from './missing/missing.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { RegisterComponent } from './register/register.component';
     GameCardComponent,
     GamePreviewComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    TrendingGameCardComponent,
+    MissingComponent
   ],
   imports: [
     BrowserModule,

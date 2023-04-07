@@ -1,9 +1,7 @@
-
 .gscontainer{
     min-width: 200px;
     position: absolute;
     top: 0;
-    bottom :0;
     left: 5%;
     right: 5%;
     height: fit-content;
@@ -11,4 +9,33 @@
 }
 .gscontainer .cards-holder{
     margin-top: 10vh;
+}
+.gscontainer .trending{
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    scrollbar-color: var(--one);
+}
+.gscontainer .trending .col{
+    padding-right: 5vw;
+}
+
+.gscontainer .trending::-webkit-scrollbar{
+    color: var(--one);
+}
+.gscontainer .dragging-cat{
+    height: fit-content;
+    transform: translatex(3vw);
+    transform: translatey(25vh);
+    z-index: -1;
+}
+.gscontainer h2{
+    color: var(--one);
+}
+.section-title{
+    background-color: var(--three);
+    width: fit-content;
+    padding: 0 2vw;
+    padding-top: 1vh;
+    border-radius: 30px;
 }
