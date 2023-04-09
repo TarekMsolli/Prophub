@@ -15,6 +15,9 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { TrendingGameCardComponent } from './trending-game-card/trending-game-card.component';
 import { MissingComponent } from './missing/missing.component';
+import { PropComponent } from './prop/prop.component';
+import { PropPreviewComponent } from './prop-preview/prop-preview.component';
+import { SocialComponent } from './social/social.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,10 @@ import { MissingComponent } from './missing/missing.component';
     LoginComponent,
     RegisterComponent,
     TrendingGameCardComponent,
-    MissingComponent
+    MissingComponent,
+    PropComponent,
+    PropPreviewComponent,
+    SocialComponent
   ],
   imports: [
     BrowserModule,

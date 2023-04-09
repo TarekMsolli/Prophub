@@ -1,22 +1,26 @@
 .gscontainer{
     min-width: 200px;
     position: absolute;
-    top: 0;
-    left: 5%;
-    right: 5%;
+    top: 7vh;
+    left: 0;
+    right: 0;
     height: fit-content;
-    margin: 5vh auto;
+    overflow-x: hidden;
 }
 .gscontainer .cards-holder{
+    overflow-x: hidden;
     margin-top: 10vh;
+    padding-left: 12vw;
 }
 .gscontainer .trending{
     overflow-x: scroll;
     overflow-y: hidden;
     scroll-behavior: smooth;
     scrollbar-color: var(--one);
+    text-align: center;
 }
 .gscontainer .trending .col{
+    padding-top: 5vh;
     padding-right: 5vw;
 }
 
@@ -29,13 +33,11 @@
     transform: translatey(25vh);
     z-index: -1;
 }
-.gscontainer h2{
+.gscontainer h3{
     color: var(--one);
 }
 .section-title{
     background-color: var(--three);
-    width: fit-content;
-    padding: 0 2vw;
-    padding-top: 1vh;
-    border-radius: 30px;
+    width: 98%;
+    padding: 1vh 2vw;
 }

@@ -1,31 +1,26 @@
-.gccontainer{
+.gaccontainer{
     max-width: 300px;
     margin-bottom: 10%;
     min-width: 330px;
 }
 
-.gccontainer .card{
+.gaccontainer .card{
     color: var(--one);
     background-color: var(--three);
     box-shadow: 2px 2px 8px black;
     transition: var(--tran-03) ease;
 }
 
-.gccontainer .card:hover{
+.gaccontainer .card:hover{
     transform: translateY(-0.75rem);
     box-shadow: 2px 2px 8px var(--one);
 }
 
-.gccontainer a{
+.gaccontainer a{
     text-decoration: none;
 }
 
-.gccontainer .card-text{
-    text-align: left;
-    color: white;
-}
-
-.gccontainer .seperator{
+.gaccontainer .seperator{
     background-color: var(--one);
     width: 80%;
     height: 1px;
@@ -40,7 +35,7 @@
     flex-wrap: wrap;
 }
 
-.gccontainer .tag{
+.gaccontainer .tag{
     position: relative;
     background-color: var(--one);
     color: var(--three);
@@ -52,12 +47,3 @@
     height: 1.2rem;
     min-width: 90px;
 }
-
-/*
-.gccontainer .tag:hover{
-    background: none;
-    border: 1px var(--one) solid;
-    color: var(--one);
-    transition: var(--tran-02);
-}
-*/
