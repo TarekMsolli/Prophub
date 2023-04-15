@@ -1,25 +1,27 @@
-import { PropPreviewComponent } from './prop-preview/prop-preview.component';
-import { NgModule, Component } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LandingComponent } from './landing/landing.component';
-import { GameShopComponent } from './game-shop/game-shop.component';
-import { GameAssetShopComponent } from './game-asset-shop/game-asset-shop.component';
-import { GamePreviewComponent } from './game-preview/game-preview.component';
-import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
-import { MissingComponent } from './missing/missing.component';
-import { SocialComponent } from './social/social.component';
+
+import { GamesComponent } from './games/games.component';
+import { AssetsComponent } from './assets/assets.component';
+import { HomeComponent } from './home/home.component';
+import { GameComponent } from './game/game.component';
+import { ProfileComponent } from './profile/profile.component';
+import { CartComponent } from './cart/cart.component';
+import { SignInComponent } from './sign-in/sign-in.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
+import { UploadPropComponent } from './upload-prop/upload-prop.component';
 
 const routes: Routes = [
-  { path: 'landing', component: LandingComponent },
-  { path: 'game-shop', component: GameShopComponent },
-  { path: 'game-asset-shop', component: GameAssetShopComponent },
-  { path: 'game-preview', component: GamePreviewComponent },
-  { path: 'login', component: LoginComponent },
-  { path: 'register', component: RegisterComponent },
-  { path: 'missing', component: MissingComponent },
-  { path: 'prop-preview', component: PropPreviewComponent },
-  { path: 'social', component: SocialComponent }
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent},
+  { path: 'games', component: GamesComponent},
+  { path: 'assets', component: AssetsComponent},
+  { path: 'game', component: GameComponent},
+  { path: 'profile', component: ProfileComponent},
+  { path: 'cart', component: CartComponent},
+  { path: 'sign-in', component: SignInComponent},
+  { path: 'sign-up', component: SignUpComponent},
+  { path: 'upload-prop', component: UploadPropComponent}
 ];
 
 @NgModule({

@@ -1,0 +1,21 @@
+.card-game{
+    display: block;
+    text-decoration: none;
+    h4{
+        font-size: 16px;
+        font-weight: 600;
+        color: #000;
+    }
+    div{
+        color: gray;
+        font-size: 13px;
+    }
+    a{
+        text-decoration: none;
+    }
+}
+.card-game:hover{
+    h4{
+        color: crimson;
+    }
+}

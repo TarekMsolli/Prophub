@@ -1,5 +1,5 @@
 {
-  "name": "prop-hub",
+  "name": "prophub",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -21,8 +21,10 @@
     "@ng-bootstrap/ng-bootstrap": "^14.1.0",
     "@popperjs/core": "^2.11.6",
     "bootstrap": "^5.2.3",
-    "boxicons": "^2.1.4",
+    "jquery": "^3.6.4",
     "rxjs": "~7.8.0",
+    "save": "^2.9.0",
+    "slick-carousel": "^1.8.1",
     "tslib": "^2.3.0",
     "zone.js": "~0.12.0"
   },
@@ -32,6 +34,8 @@
     "@angular/compiler-cli": "^15.2.0",
     "@angular/localize": "^15.2.0",
     "@types/jasmine": "~4.3.0",
+    "@types/jquery": "^3.5.16",
+    "@types/slick-carousel": "^1.6.37",
     "jasmine-core": "~4.5.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.1.0",

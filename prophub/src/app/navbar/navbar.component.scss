@@ -1,0 +1,11 @@
+.navigation-bar{
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+    border-bottom: 1px solid crimson;
+    .nav-link:hover{
+        svg{
+            fill: crimson;
+        }
+    }
+}

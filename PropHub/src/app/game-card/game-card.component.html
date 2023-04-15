@@ -1,21 +1,18 @@
-<div class="gccontainer">
-    <div class="row">
-        <div class="col">
-            <a routerLink="/game-preview">
-                <div class="card">
-                    <img src="../../assets/dummy-game.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h3 class="card-title">Card title</h3>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                    <div class="seperator"></div>
-                    <div class="tag-container">
-                        <div class="tag">dummy-tag</div>
-                        <div class="tag">dummy-tag</div>
-                        <div class="tag">dummy-tag</div>
-                    </div>
-                </div>
+<a routerLink="/game" class="card card-game border-0 bg-transparent mb-4">
+    <img src="../../assets/dummy-game.jpg" class="img-fluid" alt="" srcset="">
+    <div class="card-game-details d-flex mt-2">
+        <div class="me-2">
+            <a routerLink="/profile">
+                <img class="rounded-circle" src="../../assets/pp1.png" width="40" alt="" srcset="">
             </a>
         </div>
+        <div>
+            <h4>Insert game title here</h4>
+            <a routerLink="/profile">
+                <div>Game developer</div>
+            </a>
+            <ngb-rating [rate]="3"></ngb-rating>
+            <div>523 downloads</div>
+        </div>
     </div>
-</div>
+</a>

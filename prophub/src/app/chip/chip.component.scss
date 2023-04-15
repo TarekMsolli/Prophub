@@ -1,0 +1,35 @@
+.chip-container{
+    background-color: white;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 10px 15px;
+    z-index: 5;
+    overflow-x: scroll;
+    position: sticky;
+    top: 59px;
+    &::-webkit-scrollbar {
+        display: none;
+      }
+
+    .chip{
+        display: inline-block;
+        padding: 3px 10px;
+        font-size: 16px;
+        background-color: white;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        white-space: nowrap;
+        margin-right: 5px;
+        border-radius: 25px;
+        user-select: none;
+    }
+
+    .chip.active{
+        background-color: black;
+        color: white;
+    }
+
+    .chip:hover{
+        color: crimson;
+    }
+    
+}
