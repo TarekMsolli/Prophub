@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./profile.component.scss']
 })
 export class ProfileComponent {
-
+  randomInt = Math.floor(Math.random() * (4)) +1;
 }

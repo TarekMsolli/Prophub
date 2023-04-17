@@ -4,28 +4,28 @@
             <div class="card">
                 <img class="card-img-top mb-3" src="../../assets/sign-up-cover.jpg" alt="Sign in cover art">
                 <h2 class="mx-5">Start Your Adventure!</h2>
-                <form class="mb-5 mx-5">
+                <form novalidate [formGroup]="signUpForm" (ngSubmit)="saveUser()" class="mb-5 mx-5">
                     <div class="form-group">
-                        <label for="name">User name</label>
-                        <input type="text" class="form-control" id="name" aria-describedby="name" placeholder="Enter email" required>
-                        <small id="name" class="form-text text-muted">Your name doesn't have to be unique.</small>
+                        <label for="username">User name</label>
+                        <input type="text" class="form-control" id="username" aria-describedby="username" placeholder="Enter email" required formControlName="username">
+                        <small id="username" class="form-text text-muted">Your name doesn't have to be unique.</small>
                     </div>
                     <div class="form-group">
                         <label for="email">Email address</label>
-                        <input type="email" class="form-control" id="email" aria-describedby="email" placeholder="Enter email" required>
+                        <input type="email" class="form-control" id="email" aria-describedby="email" placeholder="Enter email" required formControlName="email">
                         <small id="email" class="form-text text-muted">We'll never share your email with anyone else.</small>
                     </div>
                     <div class="form-group">
-                        <label for="email">Confirm mail address</label>
-                        <input type="emailconfirm" class="form-control" id="email" aria-describedby="emailconfirm" placeholder="Enter email" required>
+                        <label for="confirmemail">Confirm mail address</label>
+                        <input type="email" class="form-control" id="confirmemail" aria-describedby="confirmemail" placeholder="Enter email" required formControlName="confirmemail">
                     </div>
                     <div class="form-group">
                         <label for="password">Password</label>
-                        <input type="password" class="form-control" id="password" placeholder="Password" required>
+                        <input type="password" class="form-control" id="password" placeholder="Password" required formControlName="password">
                     </div>
                     <div class="form-group">
-                        <label for="passwordconfirm">Confirm password</label>
-                        <input type="password" class="form-control" id="passwordconfirm" placeholder="Password" required>
+                        <label for="confirmpassword">Confirm password</label>
+                        <input type="password" class="form-control" id="confirmpassword" placeholder="Password" required formControlName="confirmpassword">
                     </div>
                     <div class="form-group">
                         <a routerLink="/sign-in" class="already-a-member">already a member?</a>

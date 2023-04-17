@@ -1,6 +1,8 @@
 .card-game{
+    margin-bottom: 5rem;
     display: block;
     text-decoration: none;
+    min-height: 300px;
     h4{
         font-size: 16px;
         font-weight: 600;
@@ -10,8 +12,12 @@
         color: gray;
         font-size: 13px;
     }
-    a{
+    a, p{
         text-decoration: none;
+    }
+    h5{
+        color: crimson;
+        margin-bottom: 0;
     }
 }
 .card-game:hover{

@@ -1,7 +1,9 @@
-.navigation-bar{
+.game-navigation-bar{
     position: fixed;
     width: 100%;
-    z-index: 98;
+    z-index: 99;
+    top:0;
+    left:0;
     border-bottom: 1px solid crimson;
     .nav-link:hover{
         svg{
