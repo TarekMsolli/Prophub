@@ -8,7 +8,6 @@
           <img src="../../assets/prophub.png" class="ms-2" width="120" alt="" />
         </a>
       </div>
-
       <ul class="nav col-md-auto">
         <li>
           <a routerLink="/cart" class="nav-link px-2" *ngIf="loginId !== 0">
@@ -104,10 +103,24 @@
 </div>
 
 <div class="container-fluid p-3 py-5 home-container">
-  <section class="hero py-5">
-    <h1>Welcome to Prophub</h1>
-    <p>Discover the best games and game assets for all your needs.</p>
-    <a routerLink="/games" class="cta">Browse Now</a>
+  <section class="hero py-5 d-flex flex-column">
+    <h1 class="display-1 text-center text-md-start">Welcome to Prophub</h1>
+    <p class="mb-5 ps-md-4 text-center text-md-start">
+      Discover the best games and game assets for all your needs.
+    </p>
+
+    <button
+      routerLink="/games"
+      class="btn btn-danger px-5 py-3 align-self-center align-self-md-start"
+      style="
+        border-radius: 20px;
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin: 0 0 0 1vw;
+      "
+    >
+      Browse Now
+    </button>
   </section>
   <hr />
   <section class="features">

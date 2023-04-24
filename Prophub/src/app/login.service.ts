@@ -5,24 +5,24 @@ import * as mysql from 'mysql';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class LoginService {
   userid = 0;
-  user:any;
+  user: any;
 
-  setId(id: any){
+  setId(id: any) {
     this.userid = id;
   }
 
-  getId(){
+  getId() {
     return this.userid;
   }
 
-  setUser(user:any){
-    this.user =user;
+  setUser(user: any) {
+    this.user = user;
   }
-  getUser(){
+  getUser() {
     return this.user;
   }
 }

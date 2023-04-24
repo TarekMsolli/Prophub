@@ -6,14 +6,14 @@ import { LoginService } from '../login.service';
 @Component({
   selector: 'app-sign-in',
   templateUrl: './sign-in.component.html',
-  styleUrls: ['./sign-in.component.scss']
+  styleUrls: ['./sign-in.component.scss'],
 })
 export class SignInComponent {
-  loginId:any;
+  loginId: any;
   ngOnInit(): void {
     this.loginId = this.loginService.getId();
   }
-  logout(){
+  logout() {
     this.loginService.setId(0);
     this.router.navigate(['/home']);
   }
@@ -22,23 +22,31 @@ export class SignInComponent {
   password: any;
   foundClient: any;
 
-  private readonly Games_API_URL='http://localhost/signin.php'
+  private readonly Games_API_URL = 'http://localhost/signin.php';
   clients: any = [];
 
-  constructor(private http: HttpClient, private router:Router, private loginService: LoginService) {}
+  constructor(
+    private http: HttpClient,
+    private router: Router,
+    private loginService: LoginService
+  ) {}
 
   login() {
-    fetch(this.Games_API_URL).then(data => data.json()).then((result)=> this.clients = result);
+    fetch(this.Games_API_URL)
+      .then((data) => data.json())
+      .then((result) => (this.clients = result));
 
-    const client = this.clients.find((c: { name: any; password: any; }) => c.name === this.username && c.password === this.password);
+    const client = this.clients.find(
+      (c: { name: any; password: any }) =>
+        c.name === this.username && c.password === this.password
+    );
 
     if (client) {
       this.router.navigate(['/home']);
       this.loginService.setId(client.id);
       this.loginService.setUser(client);
     } else {
-      alert("Client not found");
+      alert('Client not found');
     }
-    
   }
 }
