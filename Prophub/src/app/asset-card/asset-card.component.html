@@ -1,0 +1,20 @@
+<div class="card-game">
+    <a [routerLink]="['/asset', asset.id]" class="card card-game border-0 shadow">
+        <img src="../../assets/game-cover-{{asset.id}}.png" width="100%" class="img-fluid" alt="" srcset="">
+        <div class="card-game-details d-flex mt-2">
+            <div class="me-2">
+                <a routerLink="/profile">
+                    <img class="rounded-circle" src="../../assets/pp1.png" width="40" alt="" srcset="">
+                </a>
+            </div>
+            <div>
+                <h4>{{asset.name}}</h4>
+                <a routerLink="/profile">
+                    <p class="mb-0">{{asset.author}}</p>
+                </a>
+                <p class="mb-0">{{asset.downloads}}</p>
+                <h5 class="mt-0">{{asset.price}}$</h5>
+            </div>
+        </div>
+    </a>
+</div>
