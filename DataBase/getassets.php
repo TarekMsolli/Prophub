@@ -1,4 +1,6 @@
 <?php
+	header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");
+	header("Access-Control-Allow-Headers: Content-Type, Authorization");
 	header("Access-Control-Allow-Origin: *");
 	header("Content-Type: application/json; charset=UTF-8");
 	$servername = "localhost";
@@ -12,7 +14,7 @@
 		die("Connection failed: " . $conn->connect_error);
 	}
 	// echo "Connected successfully\n";
-	$sql = "SELECT P.id,P.name,P.description,P.author_id,C.name as author,P.downloads,P.price FROM prop P, Client C WHERE P.author_id = C.id";
+	$sql = "SELECT * FROM asset";
 
 	$result = mysqli_query($conn,$sql);
 	$myArray = array();

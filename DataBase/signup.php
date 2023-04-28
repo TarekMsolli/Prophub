@@ -1,37 +1,18 @@
 <?php
+header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");
+header("Access-Control-Allow-Headers: Content-Type, Authorization");
+header("Access-Control-Allow-Origin: *");
+header("Content-Type: application/json; charset=UTF-8");
+// Receive user data from Angular POST request
+$user = json_decode(file_get_contents('php://input'), true);
+
+// Connect to Prophub database and query user data
+$conn = new mysqli('localhost', 'root', '', 'Prophub');
+$query = "SELECT * FROM client WHERE name = '{$user['username']}' AND password = '{$user['password']}' AND email = '{$email['email']}'";
+$result = $conn->query($query);
+$row = $result->fetch_assoc();
+
+// Return user data as JSON response
 header('Content-Type: application/json');
-$servername = 'localhost';
-$username = 'root';
-$password = '';
-$dbname = 'Prophub';
-
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-
-if ($conn->connect_error) {
-  die('Connection failed: ' . $conn->connect_error);
-}
-
-
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-  $data = json_decode(file_get_contents('php://input'), true);
-  $name = $data['name'];
-  $password = $data['password'];
-
-
-  $sql = "INSERT INTO client (name, password) VALUES ('$name', '$password')";
-  if ($conn->query($sql) === TRUE) {
-    echo json_encode(array('status' => 'success'));
-  } else {
-    echo json_encode(array('status' => 'error', 'message' => $conn->error));
-  }
-
-  $conn->close();
-  exit();
-}
-
-
-http_response_code(400);
-exit();
+echo json_encode($row);
 ?>

@@ -1,4 +1,6 @@
 <?php
+	header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");
+	header("Access-Control-Allow-Headers: Content-Type, Authorization");
 	header("Access-Control-Allow-Origin: *");
 	header("Content-Type: application/json; charset=UTF-8");
 	$servername = "localhost";
@@ -11,10 +13,9 @@
 	if ($conn->connect_error) {
 		die("Connection failed: " . $conn->connect_error);
 	}
-	// echo "Connected successfully\n";
-	$sql = "SELECT cg.client_id, ROW_NUMBER() OVER (ORDER BY cg.client_id) as row_number, g.name as game_name, g.price as game_price, g.id as game_id
-	FROM client_game cg
-	JOIN game g ON g.id = cg.game_id;";
+	$demand = json_decode(file_get_contents('php://input'), true);
+
+	$sql = "DELETE FROM client_game WHERE client_id={$demand['client_id']} AND game_id={$demand['game_id']}";
 
 	$result = mysqli_query($conn,$sql);
 	$myArray = array();
