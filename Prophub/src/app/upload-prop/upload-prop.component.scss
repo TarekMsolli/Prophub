@@ -1,23 +1,9 @@
 .prop-upload-container{
-    padding-top: 100px;
     h1{
         color: crimson;
-        font-weight: 900;
     }
-}
-.upload-card{
-    padding: 50px;
-}
-.game-navigation-bar{
-    position: fixed;
-    width: 100%;
-    z-index: 99;
-    top:0;
-    left:0;
-    border-bottom: 1px solid crimson;
-    .nav-link:hover{
-        svg{
-            fill: crimson;
-        }
+    margin-top: 70px;
+    .upload-card{
+        padding: 40px;
     }
 }

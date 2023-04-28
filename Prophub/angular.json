@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Prophub": {
+    "prophub": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "Prophub:build:production"
+              "browserTarget": "prophub:build:production"
             },
             "development": {
-              "browserTarget": "Prophub:build:development"
+              "browserTarget": "prophub:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Prophub:build"
+            "browserTarget": "prophub:build"
           }
         },
         "test": {

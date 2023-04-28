@@ -1,17 +1,10 @@
-import { Component, EventEmitter, Input, Output, OnInit } from '@angular/core';
-import { NgbRatingConfig, NgbRatingModule } from '@ng-bootstrap/ng-bootstrap';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-game-card',
   templateUrl: './game-card.component.html',
-  styleUrls: ['./game-card.component.scss'],
-  providers: [NgbRatingConfig]
+  styleUrls: ['./game-card.component.scss']
 })
-export class GameCardComponent{
-  constructor(config: NgbRatingConfig) {
-		// customize default values of ratings used by this component tree
-		config.max = 5;
-		config.readonly = true;
-	}
+export class GameCardComponent {
   @Input() game: any;
 }

@@ -1,17 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
 
 /* Importing Bootstrap SCSS file. */
-@import "bootstrap/scss/bootstrap";
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;900&display=swap");
+@import 'bootstrap/scss/bootstrap';
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Poppins", "Roboto", sans-serif;
-  background-color: #f1f1f1;
-  overflow-x: hidden;
-}
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: "Poppins", "Roboto", sans-serif;
+    background-color: white;
+    overflow-x: hidden;
+  }

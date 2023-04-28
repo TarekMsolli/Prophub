@@ -1,19 +1,15 @@
 import { Component } from '@angular/core';
-import { AssetService } from './asset.service';
+import { OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-assets',
   templateUrl: './assets.component.html',
   styleUrls: ['./assets.component.scss']
 })
-export class AssetsComponent {
-  assets = [];
-
-  private readonly Assets_API_URL='http://localhost/props.php'
-  term = '';
-  constructor(private AssetService: AssetService){}
+export class AssetsComponent implements OnInit {
+  term='';
+  assets:any=[];
   ngOnInit(): void {
-    fetch(this.Assets_API_URL).then(data => data.json()).then((result)=> this.assets = result);
+    fetch('http://127.0.0.1/getassets.php').then((data)=>{return data.json()}).then((response)=>{this.assets=(response)});
   }
-
 }

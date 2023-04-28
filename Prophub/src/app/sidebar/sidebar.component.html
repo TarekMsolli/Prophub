@@ -1,4 +1,4 @@
-<div class="sidebar d-none d-sm-block slide-transition">
+<div class="sidebar d-none d-sm-block slide-transition shadow">
     <ul class="nav nav-pills flex-column mb-auto">
         <li class="nav-item">
           <a routerLink="/home" class="nav-link text-dark rounded-0">
@@ -30,10 +30,11 @@
       <hr>
       <ul class="nav nav-footer mb-3">
         <li class="nav-item">
-          <p class="nav-link text-dark">Made by</p>
+          <button class="btn" *ngIf="mail!==''" (click)="logout()"><b>Log out</b></button>
+          <!-- <p class="nav-link text-dark">Made by</p>
           <p class="nav-link text-dark">-Mariem Rjab</p>
           <p class="nav-link text-dark">-Raed Said</p>
-          <p class="nav-link text-dark">-Tarek Msolli</p>
+          <p class="nav-link text-dark">-Tarek Msolli</p> -->
         </li>
       </ul>
 </div>

@@ -1,9 +1,7 @@
-import { Component } from '@angular/core';
-import { OnInit } from '@angular/core';
-import { LoginService } from '../login.service';
-import { Router } from '@angular/router';
+import { AuthService } from './../auth.service';
 import { HttpClient } from '@angular/common/http';
-
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cart',
@@ -11,27 +9,20 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./cart.component.scss']
 })
 export class CartComponent implements OnInit{
-  carts:any;
-  CART_API_URL='http://127.0.0.1/cart.php';
-
-
-  constructor(private loginService:LoginService, private router:Router, private http:HttpClient){};
-
-  ngOnInit(): void {
-    fetch(this.CART_API_URL).then(data => data.json()).then((result)=> this.carts = result);
+  constructor(private HttpClient:HttpClient, private AuthService:AuthService, private Router:Router){}
+  demand=
+  {
+    "client_id": this.AuthService.user.id,
+    "game_id": ''
   }
-  loginId:any;
-
-  logout(){
-    this.loginService.setId(0);
-    this.router.navigate(['/home']);
+  cartlist:any;
+  ngOnInit(){
+    this.HttpClient.post('http://127.0.0.1/getcart.php', this.demand.client_id).subscribe(response => {this.cartlist=response;console.log(this.cartlist)})
   }
-
-  deleteRow(game_id: any,client_id: any) {
-    console.log(game_id, client_id);
-    console.log('Row deleted!');
-    this.http.delete(`/api/client_game?user_id=${client_id}&game_id=${game_id}`).subscribe(() => {
-      this.carts = this.carts.filter((item: { user_id: any; game_id: any; }) => item.user_id !== client_id || item.game_id !== game_id);
-    });
+  removeCartItem(id:any){
+    this.demand.game_id=id;
+    console.log(this.demand);
+    this.HttpClient.post('http://127.0.0.1/removefromcart.php', this.demand).subscribe(response => {console.log(response);})
+    this.Router.navigate(['/refreshcart']);
   }
 }

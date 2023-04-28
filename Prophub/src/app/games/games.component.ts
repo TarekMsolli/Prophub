@@ -1,34 +1,35 @@
-import { LoginService } from './../login.service';
-import { Component } from '@angular/core';
-import { GameService } from './game.service';
-import { OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+
+import { Component,OnInit, ElementRef } from '@angular/core';
+
+
 
 @Component({
   selector: 'app-games',
   templateUrl: './games.component.html',
-  styleUrls: ['./games.component.scss'],
+  styleUrls: ['./games.component.scss']
 })
-export class GamesComponent implements OnInit {
-  games = [];
-  loginId: any;
-
-  private readonly Games_API_URL = 'http://localhost/games.php';
-  term = '';
-  constructor(
-    private GameService: GameService,
-    private loginService: LoginService,
-    private router: Router
-  ) {}
+export class GamesComponent implements OnInit{
+  constructor(private ElementRef:ElementRef){}
+  term='';
+  games:any=[];
+  tags:any=[]
+  previous='sci-fi';
   ngOnInit(): void {
-    fetch(this.Games_API_URL)
-      .then((data) => data.json())
-      .then((result) => (this.games = result));
-    this.loginId = this.loginService.getId();
+    fetch('http://127.0.0.1/getgames.php').then((data)=>{return data.json()}).then((response)=>{this.games=(response)});
+    fetch('http://127.0.0.1/gettags.php').then((data)=>{return data.json()}).then((response)=>{this.tags=(response)});
   }
+  filter(name:string){
+    if(name==this.term){
+      this.term='';
+      this.ElementRef.nativeElement.querySelector('#'+name).style.backgroundColor = 'crimson';
+    }
+    else {
+      this.term=name;
+      this.ElementRef.nativeElement.querySelector('#'+name).style.backgroundColor = '#212130';
+      this.ElementRef.nativeElement.querySelector('#'+this.previous).style.backgroundColor = 'crimson';
+      this.previous=name;
+    }
 
-  logout() {
-    this.loginService.setId(0);
-    this.router.navigate(['/home']);
   }
+  
 }

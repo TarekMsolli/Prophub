@@ -1,38 +1,37 @@
-.profile-container{
-    position: absolute;
-    padding-top: 60px;
-    padding-left: 0;
-    padding-right: 0;
-    .container{
-        margin-top: 20px;
+.profile-top-container {
+    padding: 30px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+    .profile-pic {
+        display: block;
+        margin: 0 auto;
+        border-radius: 50%;
+        width: 150px;
+        object-position: center;
     }
-    h2{
-        color: crimson;
+    h1 {
+        margin-top: 0;
     }
-    .cover-image{
-        position: absolute;
-        left: 0;
-        right: 0;
-        z-index: -1;
+    h2 {
+        margin-bottom: 0;
     }
-    .profile-image{
-        width: 200px;
+    p {
+        margin-top: 0;
     }
-    .col{
-        margin-top: 25%;
-        text-align: center;
+    .editbio{
+        margin: 0 auto;
+        width: 80px;
+    }
+    .savechanges{
+        margin: 0 auto;
+        width: 180px;
     }
 }
-.game-navigation-bar{
-    position: fixed;
-    width: 100%;
-    z-index: 99;
-    top:0;
-    left:0;
-    border-bottom: 1px solid crimson;
-    .nav-link:hover{
-        svg{
-            fill: crimson;
-        }
+.profile-bot-container{
+    width: 90%;
+    padding: 50px;
+    h2{
+        color: crimson;
     }
 }

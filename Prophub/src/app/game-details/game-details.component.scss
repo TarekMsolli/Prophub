@@ -24,17 +24,3 @@
         height: 100px;
     }
 }
-.game-navigation-bar{
-    position: fixed;
-    width: 100%;
-    z-index: 99;
-    top:0;
-    left:0;
-    height: 62px;
-    border-bottom: 1px solid crimson;
-    .nav-link:hover{
-        svg{
-            fill: crimson;
-        }
-    }
-}

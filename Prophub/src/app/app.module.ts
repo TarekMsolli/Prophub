@@ -1,53 +1,57 @@
+import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
-import { ReactiveFormsModule } from '@angular/forms';
-
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { MobileNavComponent } from './mobile-nav/mobile-nav.component';
-import { GamesComponent } from './games/games.component';
-import { GameCardComponent } from './game-card/game-card.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { HttpClientModule } from '@angular/common/http';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { HomeComponent } from './home/home.component';
+import { GamesComponent } from './games/games.component';
+import { AssetsComponent } from './assets/assets.component';
+import { GameCardComponent } from './game-card/game-card.component';
+import { AssetCardComponent } from './asset-card/asset-card.component';
 import { GameDetailsComponent } from './game-details/game-details.component';
 import { CartComponent } from './cart/cart.component';
-import { AssetsComponent } from './assets/assets.component';
-import { AssetCardComponent } from './asset-card/asset-card.component';
-import { UploadPropComponent } from './upload-prop/upload-prop.component';
 import { ProfileComponent } from './profile/profile.component';
+import { RefreshcartComponent } from './refreshcart/refreshcart.component';
+import { UploadPropComponent } from './upload-prop/upload-prop.component';
+import { MobileNavComponent } from './mobile-nav/mobile-nav.component';
+
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    SidebarComponent,
-    MobileNavComponent,
-    GamesComponent,
-    GameCardComponent,
     SignInComponent,
     SignUpComponent,
+    SidebarComponent,
+    NavbarComponent,
+    HomeComponent,
+    GamesComponent,
+    AssetsComponent,
+    GameCardComponent,
+    AssetCardComponent,
     GameDetailsComponent,
     CartComponent,
-    AssetsComponent,
-    AssetCardComponent,
+    ProfileComponent,
+    RefreshcartComponent,
     UploadPropComponent,
-    ProfileComponent
+    MobileNavComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule,
     FormsModule,
-    Ng2SearchPipeModule,
     HttpClientModule,
-    ReactiveFormsModule
+    NgbModule,
+    Ng2SearchPipeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

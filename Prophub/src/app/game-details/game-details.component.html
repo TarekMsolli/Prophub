@@ -1,102 +1,80 @@
-<div class="game-navigation-bar bg-white">
-    <div class="container-fluid">
-        <div class="d-flex flex-wrap align-items-center justify-content-md-between p-1">
-            <div class="col d-flex align-items-center col-md-auto">
-                <a routerLink="/home">
-                    <img src="../../assets/prophub.png" class="ms-2" width="120" alt="">
-                </a>
-            </div>
-
-            <ul class="nav col-md-auto">
-                <li>
-                    <a routerLink="/cart" class="nav-link px-2" *ngIf="loginId !== 0">
-                        <svg fill="#000000" style="height:38px; flex-shrink:0" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                            <path xmlns="http://www.w3.org/2000/svg" d="M12 2a6 6 0 0 1 6 6v1h4v2h-1.167l-.757 9.083a1 1 0 0 1-.996.917H4.92a1 1 0 0 1-.996-.917L3.166 11H2V9h4V8a6 6 0 0 1 6-6zm1 11h-2v4h2v-4zm-4 0H7v4h2v-4zm8 0h-2v4h2v-4zm-5-9a4 4 0 0 0-3.995 3.8L8 8v1h8V8a4 4 0 0 0-3.8-3.995L12 4z"/>
-                        </svg>
-                        </a>
-                </li>
-                <li>
-                    <a routerLink="/upload-prop" class="nav-link px-2 pt-2" *ngIf="loginId !== 0">
-                        <svg fill="#000000" style="height:29px; flex-shrink:0" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                            <path xmlns="http://www.w3.org/2000/svg" d="M0 16v-1.984q0-3.328 2.336-5.664t5.664-2.336q1.024 0 2.176 0.352 0.576-2.752 2.784-4.544t5.056-1.824q3.296 0 5.632 2.368t2.368 5.632q0 0.896-0.32 2.048 0.224-0.032 0.32-0.032 2.464 0 4.224 1.76t1.76 4.224v2.016q0 2.496-1.76 4.224t-4.224 1.76h-0.384q0.288-0.8 0.352-1.44 0.096-1.312-0.32-2.56t-1.408-2.208l-4-4q-1.76-1.792-4.256-1.792t-4.224 1.76l-4 4q-0.96 0.96-1.408 2.24t-0.32 2.592q0.032 0.576 0.256 1.248-2.72-0.608-4.512-2.784t-1.792-5.056zM10.016 22.208q-0.096-0.96 0.576-1.6l4-4q0.608-0.608 1.408-0.608 0.832 0 1.408 0.608l4 4q0.672 0.64 0.608 1.6-0.032 0.288-0.16 0.576-0.224 0.544-0.736 0.896t-1.12 0.32h-1.984v6.016q0 0.832-0.608 1.408t-1.408 0.576-1.408-0.576-0.576-1.408v-6.016h-2.016q-0.608 0-1.088-0.32t-0.768-0.896q-0.096-0.288-0.128-0.576z"/>
-                        </svg>
-                    </a>
-                </li>
-                <li>
-                    <div class="d-inline-block" ngbDropdown #myDrop="ngbDropdown">
-                        <button type="button" class="btn me-2" id="dropdownManual" ngbDropdownAnchor (focus)="myDrop.open()">
-                        <img *ngIf="loginId === 0" class="rounded-circle" src="../../assets/pp2.png" width="30">
-                        <img *ngIf="loginId !== 0" class="rounded-circle" src="../../assets/tarek.jpg" width="30">
-                        </button>
-                        <div ngbDropdownMenu aria-labelledby="dropdownManual">
-                            <button routerLink="/sign-in" ngbDropdownItem>Sign in</button>
-                            <hr>
-                            <button *ngIf="loginId === 0" ngbDropdownItem [disabled]="true">Log out</button>
-                            <button *ngIf="loginId !== 0" ngbDropdownItem [disabled]="false" (click)="logout()">Log out</button>
-                        </div>      
-                    </div>               
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
 <div class="container-fluid p-5 py-3">
     <div class="row justify-content-center">
-        <div class="col-12">
-            <div class="cover">
-                <img src="../../assets/game-cover-{{game.game_id}}.png" width="100%" alt="" srcset="">
-            </div>
+      <div class="col-12">
+        <div class="cover">
+          <img
+            src="../../assets/game-cover-{{ game.game_id }}.png"
+            width="100%"
+            alt="{{ game.game_title }} cover"
+            srcset=""
+          />
         </div>
-        <h1>{{game.game_title}}</h1>
+      </div>
+      <h1>{{ game.game_title }}</h1>
     </div>
     <div class="row">
-        <div class="col-md-9 details">
-            <div class="game-description">
-                <p>
-                    {{game.description}}
-                </p>
-            </div>
-            <div class="spacer"></div>
-            <div class="credits">
-                <b>Author</b>
-                <p>{{game.game_developer}}</p>
-            </div>
-            <div class="spacer"></div>
-            <div class="more-informations">
-                <b>More informations</b>
-                <ul class="list-unstyled">
-                    <li class="mt-2">
-                        <div class="row">
-                            <div class="col info-label">Price</div>
-                            <div class="col info-content">{{game.price}}$</div>
-                        </div>
-                    </li>
-                    <li class="mt-2">
-                        <div class="row">
-                            <div class="col info-label">Rating</div>
-                            <div class="col info-content">{{game.rating}}</div>
-                        </div>
-                    </li>
-                    <li class="mt-2">
-                        <div class="row">
-                            <div class="col info-label">Downloads</div>
-                            <div class="col info-content">{{game.downloads}}</div>
-                        </div>
-                    </li>
-                    <li class="mt-2">
-                        <div class="row">
-                            <div class="col info-label">Tags</div>
-                            <div class="col info-content">{{game.tags}}</div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
+      <div class="col-md-9 details">
+        <div class="game-description">
+          <p>
+            {{ game.description }}
+          </p>
         </div>
-        <div class="col-md-3 screenshots">
-            <img src="../../assets/game-screenshot-{{game.game_id}}-1.png" alt="" srcset="">
-            <img src="../../assets/game-screenshot-{{game.game_id}}-2.png" alt="" srcset="">
-            <img src="../../assets/game-screenshot-{{game.game_id}}-3.png" alt="" srcset="">
+        <div class="spacer"></div>
+        <div class="credits">
+          <b>Author</b>
+          <a routerLink="/profile/{{ game.game_id }}">
+            <p>{{ game.game_developer }}</p>
+          </a>
         </div>
+        <div class="spacer"></div>
+        <div class="more-informations">
+          <b>More informations</b>
+          <ul class="list-unstyled">
+            <li class="mt-2">
+              <div class="row">
+                <div class="col info-label">Price</div>
+                <div class="col info-content">{{ game.price }}$</div>
+              </div>
+            </li>
+            <li class="mt-2">
+              <div class="row">
+                <div class="col info-label">Rating</div>
+                <div class="col info-content">{{ game.rating }}</div>
+              </div>
+            </li>
+            <li class="mt-2">
+              <div class="row">
+                <div class="col info-label">Downloads</div>
+                <div class="col info-content">{{ game.downloads }}</div>
+              </div>
+            </li>
+            <li class="mt-2">
+              <div class="row">
+                <div class="col info-label">Tags</div>
+                <div class="col info-content">{{ game.tags }}</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-3 screenshots">
+        <img
+          src="../../assets/game-screenshot-{{ game.game_id }}-1.png"
+          alt="{{ game.game_title }} screenshot 1"
+          srcset=""
+        />
+        <img
+          src="../../assets/game-screenshot-{{ game.game_id }}-2.png"
+          alt="{{ game.game_title }} screenshot 2"
+          srcset=""
+        />
+        <img
+          src="../../assets/game-screenshot-{{ game.game_id }}-3.png"
+          alt="{{ game.game_title }} screenshot 3"
+          srcset=""
+        />
+      </div>
     </div>
     <button class="btn btn-danger" (click)="addToCart()">Add to cart</button>
-</div>
+  </div>
+  
