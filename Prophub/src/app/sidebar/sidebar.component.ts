@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { auto } from '@popperjs/core';
 import { AuthService } from './../auth.service';
 import { Component } from '@angular/core';
@@ -9,10 +10,13 @@ import { interval } from 'rxjs';
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent {
-  constructor(private AuthService:AuthService){}
+  constructor(private AuthService:AuthService, private Router:Router){}
   mail='';
-  subscription = interval(1000).subscribe(() => {
+  home:boolean=true;
+  subscription = interval(600).subscribe(() => {
     this.mail=this.AuthService.user.email;
+    this.home=this.Router.url === '/home';
+    
   });
 
   logout(){

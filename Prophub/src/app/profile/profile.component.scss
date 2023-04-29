@@ -2,18 +2,20 @@
     padding: 30px 20px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: white;
 
     .profile-pic {
         display: block;
         margin: 0 auto;
-        border-radius: 50%;
         width: 150px;
         object-position: center;
     }
     h1 {
+        color: crimson;
         margin-top: 0;
     }
     h2 {
+        color: crimson;
         margin-bottom: 0;
     }
     p {
@@ -29,7 +31,8 @@
     }
 }
 .profile-bot-container{
-    width: 90%;
+
+    width: 100%;
     padding: 50px;
     h2{
         color: crimson;

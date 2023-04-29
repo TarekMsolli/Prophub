@@ -5,12 +5,10 @@
     width: 100%;
     height: 50px;
     border-top: 1px solid crimson;
-    background-color: white;
     display: flex;
     align-items: center;
-
+    background-color: rgba($color: #000000, $alpha: 0.9);
     z-index: 100;   
-
     ul{
         justify-content: space-evenly;
     }

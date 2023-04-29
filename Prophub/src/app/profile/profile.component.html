@@ -1,13 +1,15 @@
 <div class="profile-top-container mt-5 container-fluid">
     <div class="row">
-        <img src="../../assets/profile-{{profile[0].id}}.jpg" alt="Profile Picture" class="profile-pic">
-        <h2>{{profile[0].name}}</h2>
-        <p>#{{profile[0].id}}</p>
-        <p>{{profile[0].email}}</p>
-        <p><b>{{profile[0].description}}</b></p>
-        <button class="btn btn-primary px-1 editbio" *ngIf="sessionId === profile[0].id" (click)="editBio=true">Edit bio</button>
-        <input type="text" class="form-control mt-3" *ngIf="editBio === true" [(ngModel)]="bioDemand.bio">
-        <button class="btn btn-primary px-1 mt-3 savechanges" *ngIf="editBio === true" (click)="changeBio()">Save changes</button>
+        <img src="../../assets/profile-{{profile[0].id}}.jpg" alt="Profile Picture" class="profile-pic rounded-circle">
+      </div>
+    <div class="row">
+      <h2>{{profile[0].name}}</h2>
+      <b>#{{profile[0].id}}</b>
+      <p>{{profile[0].email}}</p>
+      <p><b>{{profile[0].description}}</b></p>
+      <button class="btn btn-primary px-1 editbio" *ngIf="sessionId === profile[0].id" (click)="editBio=true">Edit bio</button>
+      <input type="text" class="form-control mt-3" *ngIf="editBio === true" [(ngModel)]="bioDemand.bio">
+      <button class="btn btn-primary px-1 mt-3 savechanges" *ngIf="editBio === true" (click)="changeBio()">Save changes</button>
     </div>
 </div>
 <div class="profile-bot-container">

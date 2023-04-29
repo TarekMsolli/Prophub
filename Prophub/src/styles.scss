@@ -9,7 +9,18 @@
     box-sizing: border-box;
   }
   body {
+    background-color: black;
+    .back{
+      position: absolute;
+      top: -15px;
+      left: -150px;
+      background-size: cover;
+      background-position: center;
+      filter: blur(50px);
+      overflow: hidden;
+      width: 100%;
+    }
     font-family: "Poppins", "Roboto", sans-serif;
-    background-color: white;
     overflow-x: hidden;
+    
   }

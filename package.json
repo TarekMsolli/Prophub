@@ -1,5 +1,7 @@
 {
   "dependencies": {
-    "mysql": "^2.18.1"
+    "@types/three": "^0.151.0",
+    "mysql": "^2.18.1",
+    "three": "^0.152.2"
   }
 }
