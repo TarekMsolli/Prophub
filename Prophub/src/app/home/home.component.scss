@@ -3,22 +3,38 @@
     left: 0;
     top: 0;
   #rendererContainer {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    background-color: transparent;
+   position: absolute;
   }
-  .spacer{
-    height: 500px;
-  }
-  .feature-text{
-    z-index: 30;
-    position: relative;
+  .text-wrapper{
+    position: absolute;
     
+    width: 500px;
+    border-radius: 20px;
+    padding: 2rem;
+    border: white 3px solid;
     h1{
       color: crimson;
+      font-weight: 700;
     }
+    p{
+      color: white;
+    }
+    a{
+      text-decoration-color: crimson;
+    }
+  }
+  #assets{
+    top: 30rem;
+    left: 40rem;
+    backdrop-filter: blur(75px);
+  }
+  #games{
+    backdrop-filter: blur(75px);
+    top: 10rem;
+  }
+  #upload{
+    backdrop-filter: blur(75px);
+    top: 50rem;
   }
 }
 

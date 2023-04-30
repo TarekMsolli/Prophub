@@ -1,9 +1,15 @@
 .prop-upload-container{
+    color: white;
     h1{
         color: crimson;
+        font-weight: 700;
     }
     margin-top: 70px;
     .upload-card{
         padding: 40px;
+        border-radius: 20px;
+    }
+    small{
+        color: lightblue !important;
     }
 }

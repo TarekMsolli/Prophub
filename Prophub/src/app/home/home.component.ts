@@ -34,7 +34,7 @@ export class HomeComponent implements OnInit{
   private createCamera(): void {
     const aspect = window.innerWidth / window.innerHeight;
     this.camera = new THREE.PerspectiveCamera(75, aspect, 0.1, 1000);
-    this.camera.position.set(0, 50, 1);
+    this.camera.position.set(30, 50, 1);
 
   }
 
@@ -54,8 +54,7 @@ export class HomeComponent implements OnInit{
       window.addEventListener('scroll', () => {
         if (this.torus) {
           const scrollY = window.scrollY;
-          this.torus.rotation.z = scrollY * 0.001;
-          console.log(scrollY)
+          this.torus.rotation.z = scrollY * 0.002;
         }
       });
 
@@ -81,6 +80,14 @@ export class HomeComponent implements OnInit{
 
     // Add scroll event listener
     
+  }
+
+  private updateSize(): void {
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+    this.camera.aspect = width / height;
+    this.camera.updateProjectionMatrix();
+    this.renderer.setSize(width, height);
   }
 
   private render(): void {

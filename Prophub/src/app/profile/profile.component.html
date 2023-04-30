@@ -8,7 +8,7 @@
       <p>{{profile[0].email}}</p>
       <p><b>{{profile[0].description}}</b></p>
       <button class="btn btn-primary px-1 editbio" *ngIf="sessionId === profile[0].id" (click)="editBio=true">Edit bio</button>
-      <input type="text" class="form-control mt-3" *ngIf="editBio === true" [(ngModel)]="bioDemand.bio">
+      <input type="text-box" class="form-control mt-3" *ngIf="editBio === true" [(ngModel)]="bioDemand.bio">
       <button class="btn btn-primary px-1 mt-3 savechanges" *ngIf="editBio === true" (click)="changeBio()">Save changes</button>
     </div>
 </div>
