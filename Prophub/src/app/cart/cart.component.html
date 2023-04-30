@@ -11,9 +11,9 @@
         <tbody *ngFor="let item of cartlist">
         <tr>
             <th scope="row">{{item.id}}</th>
-            <td><a routerLink="/games/{{item.id}}">{{item.name}}</a></td>
-            <td>{{item.price}}</td>
-            <td><button class="btn btn-danger" (click)="removeCartItem(item.id)">cancel</button></td>
+            <th><a routerLink="/games/{{item.id}}">{{item.name}}</a></th>
+            <th>{{item.price}}</th>
+            <th><button class="btn btn-danger" (click)="removeCartItem(item.id)">cancel</button></th>
         </tr>
         </tbody>
     </table>

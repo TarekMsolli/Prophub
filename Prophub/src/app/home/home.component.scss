@@ -17,7 +17,7 @@
       font-weight: 700;
     }
     p{
-      color: white;
+      color: #1e81b0;
     }
     a{
       text-decoration-color: crimson;
@@ -35,6 +35,13 @@
   #upload{
     backdrop-filter: blur(75px);
     top: 50rem;
+  }
+  img{
+    position: absolute;
+    left: 0;
+    z-index: 1000;
+    bottom: 10px;
+    left: 330px;
   }
 }
 

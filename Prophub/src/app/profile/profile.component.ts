@@ -26,11 +26,11 @@ export class ProfileComponent implements OnInit {
   editBio = false;
   profile:any=
     {
-        "id": "2",
-        "name": "Mariem",
+        "id": "",
+        "name": "",
         "description": null,
-        "password": "asdi9a2i",
-        "email": "mariem@prophub.com"
+        "password": "",
+        "email": ""
     };
   
   ngOnInit(): void {    

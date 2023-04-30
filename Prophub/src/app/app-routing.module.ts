@@ -9,6 +9,7 @@ import { CartComponent } from './cart/cart.component';
 import { RefreshcartComponent } from './refreshcart/refreshcart.component';
 import { ProfileComponent } from './profile/profile.component';
 import { UploadPropComponent } from './upload-prop/upload-prop.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -20,7 +21,8 @@ const routes: Routes = [
   { path: 'cart', component: CartComponent},
   { path: 'refreshcart', component: RefreshcartComponent},
   { path: 'profile/:id', component: ProfileComponent},
-  { path: 'upload-prop', component: UploadPropComponent}
+  { path: 'upload-prop', component: UploadPropComponent},
+  { path: 'sign-up', component: SignUpComponent}
 ];
 
 @NgModule({
